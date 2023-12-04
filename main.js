@@ -6,14 +6,14 @@ import {
 } from './lista.js';
 
 const entrada = document.querySelector('#entrada');
-const botaoAdiciona = document.querySelector('#adiciona');
-const botaoLimpa = document.querySelector('#limpa');
-const item = document.querySelector('#item');
+const botaoAdicionar = document.querySelector('#adicionar');
+const botaoLimpar = document.querySelector('#limpar');
+const itens = document.querySelector('#itens');
 
-botaoAdiciona.addEventListener('click', adicionaItem);
-botaoLimpa.addEventListener('click', limpaLista);
+botaoAdicionar.addEventListener('click', adicionaEntrada);
+botaoLimpar.addEventListener('click', limparLista);
 
-function limpaLista(){
+function limparLista(){
     limpaLista();
     atualizaLista();
 }
@@ -26,7 +26,7 @@ function atualizaLista(){
     }
 }
 
-function adicionaItem(){
+function adicionaEntrada(){
     const item = entrada.textContent;
     adicionaItem(item);
     entrada.textContent = '';
